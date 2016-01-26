@@ -1,0 +1,30 @@
+<!doctype html>
+<title>Flexibility Test: SVG elements</title>
+<meta charset="utf-8">
+<link href="test.css" rel="stylesheet">
+<script src="../dist/flexibility.js"></script>
+
+<h1>SVG elements</h1>
+
+<h2>SVG element, no flex</h2>
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<h2>SVG element as a flex parent</h2>
+<svg width="100" height="100" class="flex">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<h2>SVG as a flex child</h2>
+<div class="flex">
+	<svg width="100" height="100">
+	    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+	</svg>
+</div>
+
+<h2>Subsequent flex styles</h2>
+<span class="flex">
+	<div class="item" style="flex-grow: 0;"><div class="box-3"></div></div>
+	<div class="item"><div class="box-4"></div></div>
+</span>
